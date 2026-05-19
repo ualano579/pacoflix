@@ -1,0 +1,151 @@
+/* Personalización de las tarjetas de los capítulos */
+.tarjeta-capitulo {
+    background-color: #1f1f1f;
+    border-left: 4px solid #333;
+    padding: 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Efecto al pasar el ratón por encima (hover) */
+.tarjeta-capitulo:hover {
+    background-color: #2a2a2a;
+    border-left-color: #dc3545; /* Rojo clásico de streaming */
+    transform: translateX(5px);
+}
+
+/* Estilo para el capítulo que se está reproduciendo actualmente */
+.tarjeta-capitulo.activa {
+    background-color: #2d1518; /* Un tono rojizo oscuro de fondo */
+    border-left-color: #dc3545;
+    box-shadow: 0 0 10px rgba(220, 53, 69, 0.2);
+}
+
+/* Títulos de los capítulos dentro de las tarjetas */
+.tarjeta-capitulo h3 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    color: #f8f9fa;
+}
+
+/* Sinopsis corta dentro de las tarjetas */
+.tarjeta-capitulo p {
+    font-size: 0.85rem;
+    color: #6c757d;
+    margin: 0;
+}
+
+/* Personalizar la barra de scroll lateral de la lista de capítulos */
+#lista-capitulos::-webkit-scrollbar {
+    width: 6px;
+}
+#lista-capitulos::-webkit-scrollbar-thumb {
+    background: #444;
+    border-radius: 3px;
+}
+#lista-capitulos::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+/* Estilos para las tarjetas de la página de inicio */
+.tarjeta-home {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.tarjeta-home:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 20px rgba(220, 53, 69, 0.3);
+    border-color: #dc3545 !important;
+}
+.border-dashed {
+    border-style: dashed !important;
+}
+/* --- MEJORAS DE CONTRASTE Y VISIBILIDAD --- */
+
+/* Forzar que el fondo de la pantalla sea un gris ligeramente más claro para que resalten las cajas negras */
+body.bg-dark {
+    background-color: #141414 !important; /* El negro exacto de fondo de Netflix */
+}
+
+/* Hacer que las tarjetas de la pantalla de inicio resalten más */
+.tarjeta-home {
+    background-color: #181818 !important; /* Fondo gris oscuro muy elegante */
+    border: 1px solid #333 !important; /* Borde visible */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra para dar profundidad */
+}
+
+/* Mejorar la visibilidad de los textos grises que no se leían */
+.text-secondary, .text-muted, .tarjeta-capitulo p {
+    color: #b3b3b3 !important; /* Un gris mucho más claro y legible */
+}
+
+/* Resaltar los títulos de las temporadas en la home */
+.card-title.text-danger {
+    color: #e50914 !important; /* Rojo oficial de Netflix, más vivo */
+    font-weight: 700;
+}
+
+/* Ajustes para la tarjeta de "Próximamente" */
+.border-dashed {
+    border: 2px dashed #444 !important;
+    background-color: rgba(255, 255, 255, 0.02) !important;
+}
+
+.border-dashed h4 {
+    color: #8c8c8c !important;
+}
+/* --- ESTILOS PARA EL DESPLEGABLE DE TEMPORADAS --- */
+.dropdown-menu {
+    background-color: #141414 !important; /* Fondo negro como la web */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
+}
+
+.dropdown-item {
+    transition: background-color 0.2s ease, color 0.2s ease;
+    padding: 10px 20px;
+}
+
+/* Al pasar el ratón por encima de una temporada */
+.dropdown-item:hover {
+    background-color: #e50914 !important; /* Rojo Netflix */
+    color: #ffffff !important;
+}
+
+/* Flechita del desplegable */
+.dropdown-toggle::after {
+    vertical-align: middle;
+    margin-left: 8px;
+}
+/* --- EFECTO CAPÍTULO VISTO --- */
+.visto-atenuado {
+    opacity: 0.55; /* Lo vuelve un pelín transparente */
+    border-left: 4px solid #6c757d !important; /* Borde gris en vez de rojo */
+    transition: opacity 0.3s ease;
+}
+
+.visto-atenuado:hover {
+    opacity: 0.9; /* Si pasa el ratón por encima, recupera color */
+}
+
+/* Ajuste de float para el badge de visto */
+.tarjeta-capitulo h3 span {
+    font-size: 0.75rem;
+    font-weight: normal;
+    background: #222;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+/* --- CURSOR PERSONALIZADO RETRO SEGURO --- */
+html, body, .tarjeta-capitulo, button, a, .dropdown-item {
+    /* Cursor píxel negro con borde blanco, estilo clásico de juego pixel art */
+    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M0 0v16l4-4 3 7 3-1-3-7 5-1z' fill='%238B5A2B' stroke='%23FFD700' stroke-width='1.5'/%3E%3C/svg%3E"), auto !important;
+}
+/* --- FONDO FLOTANTE DESORDENADO CON COLORES ORIGINALES --- */
+body.bg-dark {
+    background-color: #121212 !important;
+}
+
+/* Asegura que el contenido principal flote por encima sin problemas */
+.container, header {
+    position: relative;
+    z-index: 5;
+}   

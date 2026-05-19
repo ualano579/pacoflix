@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PACOFLIX - Temporada 2 🎬</title>
+    <link rel="icon" type="image/png" href="../img/favicon.png">
+    <link rel="stylesheet" href="../css/bootstrap.min.css"> 
+    <link rel="stylesheet" href="../css/style.css"> 
+</head>
+<body class="bg-dark text-white">
+
+    <header class="p-3 bg-black d-flex justify-content-between align-items-center border-bottom border-secondary">
+        <a href="../index.html" class="btn btn-sm btn-outline-secondary fw-bold">← Volver al Inicio</a>
+        <h1 class="text-danger fw-bold m-0 h3">PACOFLIX</h1>
+        
+        <div class="dropdown">
+            <button class="btn btn-danger btn-sm dropdown-toggle fw-bold px-3 fs-6" type="button" id="menuTemporadas" data-bs-toggle="dropdown" aria-expanded="false">
+                Temporada 2 🎬
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end bg-black border-secondary" aria-labelledby="menuTemporadas">
+                <li><a class="dropdown-item text-white" href="t1.html">Temporada 1</a></li>
+                <li><a class="dropdown-item text-white" href="t2.html">Temporada 2</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="container-fluid my-4">
+        <div class="row">
+            
+            <div class="col-lg-8 mb-4">
+                <div class="ratio ratio-16x9 shadow-lg bg-black rounded overflow-hidden">
+                    <iframe id="reproductor" src="" allow="autoplay" allowfullscreen></iframe>
+                </div>
+                
+                <div id="aviso-calidad" class="alert alert-dark bg-black text-secondary border-secondary mt-2 p-2 d-flex justify-content-between align-items-center small">
+                    <span id="texto-calidad">Cargando info de calidad...</span>
+                    <span id="badge-calidad" class="badge bg-secondary">--</span>
+                </div>
+
+                <div class="mt-2 p-3 bg-black rounded">
+                    <h2 id="titulo-actual" class="text-warning">Cargando...</h2>
+                    <p id="sinopsis-actual" class="text-secondary lead">Cargando sinopsis...</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <h4 class="mb-3 text-uppercase text-secondary tracking-wider">Capítulos</h4>
+                <div id="lista-capitulos" class="d-flex flex-column gap-2" style="max-height: 70vh; overflow-y: auto;"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="../js/temporadas.js"></script>
+    <script>
+        // Le indicamos a app.js que cargue los datos del bloque 'temporada2'
+        window.CONFIG_TEMPORADA = 'temporada2'; 
+    </script>
+    <script src="../js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <div class="modal fade" id="modalHacker" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content bg-black border-danger text-white shadow-lg">
+                <div class="modal-header border-secondary bg-dark">
+                    <h5 class="modal-title text-danger fw-bold">⚠️ [SISTEMA COMPROMETIDO] - Flag Capturada con Éxito</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center p-4">
+                    <h2 class="text-warning fw-bold mb-3">¡Felicidades, Hacker! 🏴‍☠️</h2>
+                    <p class="lead text-secondary">Has vulnerado la seguridad de PACOFLIX elevando privilegios a Admin.</p>
+                    
+                    <hr class="border-secondary my-4">
+                    
+                    <div class="my-3">
+                        <p class="fs-5 italic text-white">"Aquí pones tu dedicatoria bonita, un meme interno de vuestros CTFs, o lo que te apetezca decirle por su cumpleaños/San Valentín."</p>
+                    </div>
+                    
+                    <hr class="border-secondary my-4">
+                    <span class="badge bg-danger p-2 fs-6">FLAG{N4t1v1x_H4ck3d_By_41nh04}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
