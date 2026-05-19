@@ -10,123 +10,129 @@
 </head>
 <body class="bg-dark text-white">
 
-    <header class="py-4 bg-black border-bottom border-secondary position-relative">
-        <div class="container-fluid d-flex justify-content-center align-items-center">
-            
-            <div class="position-absolute start-0 ms-4">
-                <img src="img/favicon.png" alt="Málaga CF" style="height: 48px; width: auto;">
-            </div>
-            
-            <h1 class="text-danger fw-bold m-0 display-6">PACOFLIX</h1>
-            
-            <span class="badge bg-danger px-3 py-2 fw-bold text-uppercase position-absolute end-0 me-4 d-none d-md-block">
-                ¡Feliz Cumpleaños, Paco! 🎂
-            </span>
-            
-        </div>
-    </header>   
-
-    <div class="container mt-5">
-        <div class="mb-5 shadow-lg">
-            <img src="img/banner.png" alt="¡Feliz Cumpleaños Paco!" class="img-fluid rounded-3 border border-secondary w-100">
+    <div id="pantalla-login" style="position: fixed; top:0; left:0; width:100%; height:100%; background:#121212; z-index: 9999; display: flex; flex-direction: column; align-items: center; justify-content: center; color: white;">
+        <h1 class="text-danger fw-bold mb-4">PACOFLIX</h1>
+        <div class="p-4 bg-dark rounded border border-secondary shadow text-center" style="max-width: 350px; width: 90%;">
+            <p class="small text-secondary mb-3">Introduce la clave de acceso al Pacoverso</p>
+            <input type="password" id="clave-input" class="form-control bg-black text-white border-secondary text-center mb-3" placeholder="Contraseña...">
+            <button onclick="comprobarClave()" class="btn btn-danger w-100 fw-bold">Entrar</button>
+            <p id="error-login" class="text-danger small mt-2 d-none">❌ Clave incorrecta, pirata.</p>
         </div>
     </div>
 
-    <main class="container my-5">
-        <h2 class="mb-4 text-warning fw-semibold">📺 Nuestras Aventuras</h2>
-        
-        <div class="row g-4 mb-5">
-            <div class="col-md-4">
-                <div class="card bg-black text-white border-secondary h-100 tarjeta-home shadow overflow-hidden">
-                    <img src="img/portada-hawaii.png" class="card-img-top" alt="Hawai 5-0 Temporada 1" style="object-fit: cover; height: 200px;">
-                    
-                    <div class="card-body d-flex flex-column justify-content-between p-4">
-                        <div>
-                            <div class="d-flex justify-content-between align-items-center mb-3">
-                                <h3 class="card-title text-white fw-bold h4 m-0">Temporada 1</h3>
-                                <span class="badge bg-secondary small">360p</span>
-                            </div>
-                            <p class="card-text text-secondary small">
-                                Revive el inicio de la aventura de Hawái 5-0 (Paco Edition). Misterios, risas y los primeros momentos favoritos.
-                            </p>
-                        </div>
-                        <a href="vistas/t1.html" class="btn btn-danger mt-3 w-100 fw-bold py-2">▶️ Ver Temporada 1</a>
-                    </div>
-                </div>
-            </div>
+    <div id="contenido-web" style="display: none;">
 
-            <div class="col-md-4">
-                <div class="card bg-black text-white border-secondary h-100 tarjeta-home shadow overflow-hidden">
-                    <img src="img/portada-hawaii.png" class="card-img-top" alt="Hawai 5-0 Temporada 2" style="object-fit: cover; height: 200px;">
-                    
-                    <div class="card-body d-flex flex-column justify-content-between p-4">
-                        <div>
-                            <div class="d-flex justify-content-between align-items-center mb-3">
-                                <h3 class="card-title text-white fw-bold h4 m-0">Temporada 2</h3>
-                                <span class="badge bg-warning text-dark small fw-bold">COLA DE REND.</span>
-                            </div>
-                            <p class="card-text text-secondary small">
-                                Las cosas se complican en el año 2011. Los capítulos se están cocinando en el mi PC no patata
-                            </p>
-                        </div>
-                        <a href="vistas/t2.html" class="btn btn-danger mt-3 w-100 fw-bold py-2">▶️ Ver Temporada 2</a>
-                    </div>
+        <header class="py-4 bg-black border-bottom border-secondary position-relative">
+            <div class="container-fluid d-flex justify-content-center align-items-center">
+                
+                <div class="position-absolute start-0 ms-4">
+                    <img src="img/favicon.png" alt="Málaga CF" style="height: 48px; width: auto;">
                 </div>
+                
+                <h1 class="text-danger fw-bold m-0 display-6">PACOFLIX</h1>
+                
+                <span class="badge bg-danger px-3 py-2 fw-bold text-uppercase position-absolute end-0 me-4 d-none d-md-block">
+                    ¡Feliz Cumpleaños, Paco! 🎂
+                </span>
+                
             </div>
-            
-            <div class="col-md-4">
-                <div class="card bg-black text-white border-secondary h-100 opacity-75 d-flex align-items-center justify-content-center text-center p-4 shadow" style="border-style: dashed !important; min-height: 340px;">
-                    <div class="p-3">
-                        <div class="fs-1 mb-2">💎</div>
-                        <h4 class="text-warning h5 fw-bold">Especial Cobblemon & SV</h4>
-                        <p class="small text-secondary m-0">Sección encriptada. Se rumorea que hay un reto de hacking esperándote en las temporadas...</p>
-                    </div>
-                </div>
+        </header>   
+
+        <div class="container mt-5">
+            <div class="mb-5 shadow-lg">
+                <img src="img/banner.png" alt="¡Feliz Cumpleaños Paco!" class="img-fluid rounded-3 border border-secondary w-100">
             </div>
         </div>
-    </main>
 
-    <img src="img/favicon.png" alt="Málaga" 
-         style="position: fixed; top: 12%; left: 3%; width: 65px; transform: rotate(-15deg); z-index: 1; opacity: 0.6;">
-    
-    <img src="img/White_Chicken.png" alt="Pollo Stardew" 
-         style="position: fixed; top: 26%; left: 6%; width: 45px; transform: rotate(12deg); z-index: 1; opacity: 0.7;">
-    
-    <img src="img/fondo-r6-1.png" alt="R6" 
-         style="position: fixed; top: 39%; left: 2%; width: 45px; transform: rotate(20deg); z-index: 1; opacity: 0.5;">
-    
-    <img src="img/Duck.png" alt="Pato Stardew" 
-         style="position: fixed; top: 52%; left: 5%; width: 50px; transform: rotate(-18deg); z-index: 1; opacity: 0.7;">
-    
-    <img src="img/fondo-r6-2.png" alt="R6" 
-         style="position: fixed; top: 66%; left: 3%; width: 58px; transform: rotate(-8deg); z-index: 1; opacity: 0.6;">
-    
-    <img src="img/fondo-r6-3.png" alt="R6" 
-         style="position: fixed; top: 79%; left: 6%; width: 50px; transform: rotate(-25deg); z-index: 1; opacity: 0.5;">
-    
-    <img src="img/fondo-r6-4.png" alt="R6" 
-         style="position: fixed; top: 90%; left: 2%; width: 48px; transform: rotate(15deg); z-index: 1; opacity: 0.4;">
+        <main class="container my-5">
+            <h2 class="mb-4 text-warning fw-semibold">📺 Nuestras Aventuras</h2>
+            
+            <div class="row g-4 mb-5">
+                <div class="col-md-4">
+                    <div class="card bg-black text-white border-secondary h-100 tarjeta-home shadow overflow-hidden">
+                        <img src="img/portada-hawaii.png" class="card-img-top" alt="Hawai 5-0 Temporada 1" style="object-fit: cover; height: 200px;">
+                        
+                        <div class="card-body d-flex flex-column justify-content-between p-4">
+                            <div>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <h3 class="card-title text-white fw-bold h4 m-0">Temporada 1</h3>
+                                    <span class="badge bg-secondary small">360p</span>
+                                </div>
+                                <p class="card-text text-secondary small">
+                                    Revive el inicio de la aventura de Hawái 5-0 (Paco Edition). Misterios, risas y los primeros momentos favoritos.
+                                </p>
+                            </div>
+                            <a href="vistas/t1.html" class="btn btn-danger mt-3 w-100 fw-bold py-2">▶️ Ver Temporada 1</a>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="col-md-4">
+                    <div class="card bg-black text-white border-secondary h-100 tarjeta-home shadow overflow-hidden">
+                        <img src="img/portada-hawaii.png" class="card-img-top" alt="Hawai 5-0 Temporada 2" style="object-fit: cover; height: 200px;">
+                        
+                        <div class="card-body d-flex flex-column justify-content-between p-4">
+                            <div>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <h3 class="card-title text-white fw-bold h4 m-0">Temporada 2</h3>
+                                    <span class="badge bg-warning text-dark small fw-bold">COLA DE REND.</span>
+                                </div>
+                                <p class="card-text text-secondary small">
+                                    Las cosas se complican en el año 2011. Los capítulos se están cocinando en el mi PC no patata
+                                </p>
+                            </div>
+                            <a href="vistas/t2.html" class="btn btn-danger mt-3 w-100 fw-bold py-2">▶️ Ver Temporada 2</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card bg-black text-white border-secondary h-100 opacity-75 d-flex align-items-center justify-content-center text-center p-4 shadow" style="border-style: dashed !important; min-height: 340px;">
+                        <div class="p-3">
+                            <div class="fs-1 mb-2">💎</div>
+                            <h4 class="text-warning h5 fw-bold">Especial Cobblemon & SV</h4>
+                            <p class="small text-secondary m-0">Sección encriptada. Se rumorea que hay un reto de hacking esperándote en las temporadas...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
 
-    <img src="img/fondo-stardew1.png" alt="Stardew Logo" 
-         style="position: fixed; top: 10%; right: 4%; width: 75px; transform: rotate(5deg); z-index: 1; opacity: 0.6;">
-    
-    <img src="img/White_Cow.png" alt="Vaca Stardew" 
-         style="position: fixed; top: 24%; right: 3%; width: 60px; transform: rotate(-10deg); z-index: 1; opacity: 0.7;">
-    
-    <img src="img/fondo-r6-4.png" alt="R6" 
-         style="position: fixed; top: 38%; right: 6%; width: 60px; transform: rotate(-18deg); z-index: 1; opacity: 0.5;">
-    
-    <img src="img/Goat.png" alt="Cabra Stardew" 
-         style="position: fixed; top: 51%; right: 2%; width: 55px; transform: rotate(15deg); z-index: 1; opacity: 0.7;">
-    
-    <img src="img/favicon.png" alt="Málaga" 
-         style="position: fixed; top: 65%; right: 5%; width: 48px; transform: rotate(12deg); z-index: 1; opacity: 0.4;">
-    
-    <img src="img/fondo-r6-1.png" alt="R6" 
-         style="position: fixed; top: 78%; right: 3%; width: 45px; transform: rotate(-10deg); z-index: 1; opacity: 0.6;">
-    
-    <img src="img/fondo-r6-2.png" alt="R6" 
-         style="position: fixed; top: 89%; right: 5%; width: 55px; transform: rotate(30deg); z-index: 1; opacity: 0.5;">
+        <img src="img/favicon.png" alt="Málaga" style="position: fixed; top: 12%; left: 3%; width: 65px; transform: rotate(-15deg); z-index: 1; opacity: 0.6;">
+        <img src="img/White_Chicken.png" alt="Pollo Stardew" style="position: fixed; top: 26%; left: 6%; width: 45px; transform: rotate(12deg); z-index: 1; opacity: 0.7;">
+        <img src="img/fondo-r6-1.png" alt="R6" style="position: fixed; top: 39%; left: 2%; width: 45px; transform: rotate(20deg); z-index: 1; opacity: 0.5;">
+        <img src="img/Duck.png" alt="Pato Stardew" style="position: fixed; top: 52%; left: 5%; width: 50px; transform: rotate(-18deg); z-index: 1; opacity: 0.7;">
+        <img src="img/fondo-r6-2.png" alt="R6" style="position: fixed; top: 66%; left: 3%; width: 58px; transform: rotate(-8deg); z-index: 1; opacity: 0.6;">
+        <img src="img/fondo-r6-3.png" alt="R6" style="position: fixed; top: 79%; left: 6%; width: 50px; transform: rotate(-25deg); z-index: 1; opacity: 0.5;">
+        <img src="img/fondo-r6-4.png" alt="R6" style="position: fixed; top: 90%; left: 2%; width: 48px; transform: rotate(15deg); z-index: 1; opacity: 0.4;">
+
+        <img src="img/fondo-stardew1.png" alt="Stardew Logo" style="position: fixed; top: 10%; right: 4%; width: 75px; transform: rotate(5deg); z-index: 1; opacity: 0.6;">
+        <img src="img/White_Cow.png" alt="Vaca Stardew" style="position: fixed; top: 24%; right: 3%; width: 60px; transform: rotate(-10deg); z-index: 1; opacity: 0.7;">
+        <img src="img/fondo-r6-4.png" alt="R6" style="position: fixed; top: 38%; right: 6%; width: 60px; transform: rotate(-18deg); z-index: 1; opacity: 0.5;">
+        <img src="img/Goat.png" alt="Cabra Stardew" style="position: fixed; top: 51%; right: 2%; width: 55px; transform: rotate(15deg); z-index: 1; opacity: 0.7;">
+        <img src="img/favicon.png" alt="Málaga" style="position: fixed; top: 65%; right: 5%; width: 48px; transform: rotate(12deg); z-index: 1; opacity: 0.4;">
+        <img src="img/fondo-r6-1.png" alt="R6" style="position: fixed; top: 78%; right: 3%; width: 45px; transform: rotate(-10deg); z-index: 1; opacity: 0.6;">
+        <img src="img/fondo-r6-2.png" alt="R6" style="position: fixed; top: 89%; right: 5%; width: 55px; transform: rotate(30deg); z-index: 1; opacity: 0.5;">
+
+    </div>
+
+    <script>
+        function comprobarClave() {
+            const input = document.getElementById('clave-input').value;
+            
+            // "cGFjbzM3bGFpbmhvYTIwMDMyNg==" es la clave encriptada en Base64
+            if (btoa(input) === "cGFjb3lhaW5ob2EyMDAzMjY=") {
+                document.getElementById('pantalla-login').style.display = 'none';
+                document.getElementById('contenido-web').style.display = 'block';
+            } else {
+                document.getElementById('error-login').classList.remove('d-none');
+            }
+        }
+
+        // Detecta la tecla Enter en el input para poder entrar sin hacer clic
+        document.getElementById('clave-input').addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') comprobarClave();
+        });
+    </script>
 </body>
 </html>
