@@ -110,7 +110,7 @@ const seriesData = {
             id: 16,
             titulo: "T1 E16: Proteger",
             sinopsis: "Cuando el testigo clave en la sentencia para poner a un líder de una banda desaparece, el equipo es enviado para dar la vuelta a la sala del tribunal a tiempo para la audiencia. Los dos guardias armados enviados para protegerlo son hallados muertos en el maletero de una patrulla, y la casa en la que se supone que vive es saqueada: los instintos de McGarrett como Navy SEAL le dicen que pelearon y escaparon ya que son asesinos entrenados. Dany no asiste a la caza de Steve a través de la densa selva de Hawái, y en su lugar se centra en mantener a su hija (Grace) y su exesposa (Rachel) seguras. Convencida de que Stan (actual esposo de Rachel) tiene algo que ver con el robo del auto, Dany tiene la intención de llegar al fondo de cualquier danger a fin de mantener segura a Grace.",
-            url: "",
+            url: "https://drive.google.com/file/d/1tkiQiq6L9oZTTR-2gJ1JLGRImzl69Z0Z/preview",
             calidad: "360p"
         },
         {
